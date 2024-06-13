@@ -14,4 +14,4 @@ rules = [ 70 1 1;
 		  10 0 1;
 		  100 0 0;];
 
-u = find_utilities(data,rules,number_of_experts)
+utils = find_utilities(data,rules,number_of_experts)
