@@ -1,4 +1,4 @@
-iterations=1000;
+iterations=10000;
 
 data = [ 30 30 9.5*2.7 6 0.4;
 		 40 50 12.5*2 5 0.4;
@@ -17,8 +17,15 @@ rules = [ 70 1 1;
 		  100 0 0;];
 utils = find_utilities(data,rules,number_of_experts)
 
+Prrs = zeros(1,5)
+
 for s=0.2:0.1:0.6
+	Prr_s = 0;
+	Prrs_i = 1;
 	for i=1:iterations
-		
+		utils = find_utilities(data,rules,number_of_experts);
+		% if rank reversals occur Prr_s = Prr_s + 1;
 	end
+	Prrs(Prrs_i) = Prr_s / iterations;
+	Prrs_i = Prrs_i + 1;
 end
