@@ -1,4 +1,4 @@
-iterations=1000;
+iterations=10000;
 
 data = [ 30 30 9.5*2.7 6 0.4;
 		 40 50 12.5*2 5 0.4;
@@ -42,4 +42,8 @@ for s=0.2:0.1:0.6
 	Prrs_i = Prrs_i + 1;
 end
 
-Prrs
+plot(Prrs,0.2:0.1:0.6);
+ylabel("s");
+xlabel("Prr");
+title("Prr vs s");
+input("Press ENTER to exit");
