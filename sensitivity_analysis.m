@@ -29,7 +29,7 @@ for s=0.2:0.1:0.6
 	for i=1:iterations
 		u = find_utilities_with_pertrubation(data,rules,number_of_experts,s,col_of_interest);
 
-		% if rank reversals occur Prr_s = Prr_s + 1;
+		# if rank reversals occur Prr_s = Prr_s + 1;
 		order = find_order(u);
 		for j=1:rows(order)
 			if order(j) != actual_order(j)
@@ -42,6 +42,7 @@ for s=0.2:0.1:0.6
 	Prrs_i = Prrs_i + 1;
 end
 
+Prrs
 plot(Prrs,0.2:0.1:0.6);
 ylabel("s");
 xlabel("Prr");

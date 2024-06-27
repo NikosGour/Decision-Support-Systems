@@ -13,6 +13,8 @@ function u = find_utilities_with_pertrubation(data,rules,number_of_experts, s, c
 
 	for i = 1:number_of_experts
 		petrubation = s * weights(i,col_of_interest);
+		#printf("Petrubation %d: %f\n", i, petrubation);
+		#printf("Pertrubation / (columns(data) - 1) [%d]: %f\n",(columns(data) - 1), petrubation / (columns(data) - 1));
 		weights(i,col_of_interest) = weights(i,col_of_interest) + petrubation;
 		for col = 1:columns(data)
 			if col != col_of_interest

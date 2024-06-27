@@ -16,3 +16,4 @@ rules = [ 70 1 1;
 
 s=0.2:0.1:0.6;
 
+u = find_utilities_with_pertrubation(data,rules,number_of_experts,s(1),5)
